@@ -1,0 +1,26 @@
+<aside id="contact">
+    <h2 class="text-xl font-display font-bold mb-4">
+        Contact Me
+    </h2>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot">
+        <p class="hidden">
+            <label for="honeypot">Are you a bot?</label>
+            <input type="text" name="bot" />
+        </p>
+        <p class="mb-2">
+            <label for="name">Name:</label><br/>
+            <input type="text" name="name" placeholder="Cortana" class="border-0 rounded focus:ring-2 focus:ring-green-200" />
+        </p>
+        <p class="my-2">
+            <label for="email">Email:</label><br/>
+            <input type="email" name="email" placeholder="rogue@ai.com" class="border-0 rounded focus:ring-2 focus:ring-green-200" />
+        </p>
+        <p class="my-2">
+            <label for="message">Message:</label><br/>
+            <textarea name="message" placeholder="Have you tried turning it off and on again?" class="border-0 border-none rounded focus:ring-2 focus:ring-green-200" required></textarea>
+        </p>
+        <p class="mt-4 text-center">
+            <button type="submit" class="shadow-md text-white font-semibold border-0 bg-green-500 hover:bg-green-600 p-2 rounded">Submit</button> 
+        </p>
+    </form>
+</aside>

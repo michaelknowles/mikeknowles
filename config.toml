@@ -1,0 +1,11 @@
+baseURL = "https://mikeknowl.es/"
+languageCode = "en-us"
+title = "Mike Knowles"
+
+assetDir = "assets"
+contentDir = "content"
+dataDir = "data"
+layoutDir = "layouts"
+staticDir = "static"
+
+enableEmoji = true
