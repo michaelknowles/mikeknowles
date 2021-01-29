@@ -2,7 +2,7 @@
 
 module.exports = {
   purge: {
-    enabled: process.env.HUGO_ENVIRONMENT === "production",
+    enabled: true,
     content: ["./*.html"],
   },
   darkMode: false, // or 'media' or 'class'
@@ -12,19 +12,19 @@ module.exports = {
       body: ["Lato", "Helvetica", "Arial", "sans-serif"],
     },
     extend: {
-      animation: {
-        fadeIn: "fadeIn 0.5s ease-in forwards",
-      },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
-        },
-      },
+      // animation: {
+      //   fadeIn: "fadeIn 0.5s ease-in forwards",
+      // },
+      // keyframes: {
+      //   fadeIn: {
+      //     "0%": { opacity: 0 },
+      //     "100%": { opacity: 1 },
+      //   },
+      // },
     },
   },
   variants: {
-    animation: ["motion-safe"],
+    // animation: ["motion-safe"],
     extend: {},
   },
   plugins: [require("@tailwindcss/forms")],
