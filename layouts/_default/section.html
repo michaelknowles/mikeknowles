@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="mx-auto mb-8 space-y-10 prose">
+    <div class="space-y-4 pb-4">
+        <h1>
+            {{ .Title }}
+        </h1>
+        <p>
+            {{ .Summary }}
+        </p>
+        <p>
+            <a href="{{ .Params.github }}">
+                {{ .Params.github }}
+            </a>
+        </p>
+    </div>
+    <div>
+        {{ .Content }}
+    </div>
+    {{ range .Pages }}
+    <div>
+        <h3 class="text-l font-semibold hover:text-green-500">
+            <a href="{{ .Permalink }}">
+                {{ .Title }}
+            </a>
+        </h3>
+        <p>
+            {{ .Summary }}
+        </p>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

@@ -1,14 +1,56 @@
 {{ define "main" }}
-  <div class="mb-8">
-    {{ .Content }}
-    <div class="flex flex-col space-y-8 pt-4 md:flex-row md:space-y-0 md:space-x-8">
-        <article class="flex-grow">
-          <h2 class="text-xl font-display font-bold mb-4">Projects</h2>
-          <p>
-            This is my new personal website! I'll be listing some of my featured work here pretty soon. Sorry it's not quite ready yet. In the meantime, you can check my Github or LinkedIn in the footer links at the bottom of the page to see what I've been up to.
-          </p>
-        </article>
-        {{- partial "contact.html" . -}}
-    </div>
+<div class="mb-8 space-y-10">
+  <main class="flex flex-col md:flex-row md:space-x-8">
+    <section class="flex flex-col space-y-4 md:space-y-8">
+      <div class="font-display font-black text-6xl md:text-right lg:leading-relaxed">
+        Hello,
+        <br />
+        I'm <h1 class="text-green-500">Mike</span>
+          <br />
+          Knowles
+        </h1>
+      </div>
+      <div class="flex-grow md:flex-grow-0 md:text-right">
+        <p>a Full Stack Engineer based in Sacramento, CA, USA.</p>
+        <br />
+        <p>
+          I like to talk about&hellip;
+        <ul class="list-inside">
+          <li class="pl-2">👪 my family</li>
+          <li class="pl-2">👻 scary stuff</li>
+          <li class="pl-2">🍕 pizza</li>
+          <li class="pl-2">🕹️ video games</li>
+        </ul>
+        </p>
+      </div>
+      <div class="self-center pt-4">
+        <a href="/Knowles_Michael_Resume.pdf"
+          class="shadow-md bg-green-500 hover:bg-green-600 p-4 rounded text-white font-semibold">
+          See My Résumé
+        </a>
+      </div>
+    </section>
+    <figure class="hidden md:block max-w-lg text-right">
+      <img src="family.jpg" alt="My family and I" />
+      <figcaption>My family and I</figcaption>
+    </figure>
+  </main>
+  <div class="flex flex-col space-y-8 pt-4 md:flex-row md:space-y-0 md:space-x-8">
+    <article class="flex-grow">
+      <h2 class="text-xl font-display font-bold mb-4">Projects</h2>
+      {{ range first 5 (where (where (where .Site.Pages "Section" "projects") "Kind" "section") ".Params.hide_toc" "!=" true) }}
+      <div class="ml-2">
+        <h3 class="text-l font-semibold hover:text-green-500">
+          <a href="{{ .Permalink }}">
+            {{ .Title }}
+          </a>
+        </h3>
+        <p>
+          {{ .Summary }}
+        </p>
+      </div>
+      {{ end }}
+    </article>
   </div>
+</div>
 {{ end }}

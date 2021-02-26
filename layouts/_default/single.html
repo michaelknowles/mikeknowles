@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="mx-auto mb-8 divide-y-2 divide-green-500">
+    <div class="space-y-4 pb-4 prose">
+        <h1>
+            {{ .Title }}
+        </h1>
+        <p>
+            {{ .Summary }}
+        </p>
+        <p>
+            <a href="{{ .Params.github }}">
+                {{ .Params.github }}
+            </a>
+        </p>
+    </div>
+    <div class="pt-4 prose">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}

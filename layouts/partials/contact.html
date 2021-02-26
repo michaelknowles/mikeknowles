@@ -1,23 +1,23 @@
-<aside id="contact">
+<aside id="contact" class="pt-4 border-t-2 border-green-500">
     <h2 class="text-xl font-display font-bold mb-4">
         Contact Me
     </h2>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot" class="md:inline-flex space-x-4 container justify-center">
         <p class="hidden">
             <label for="honeypot">Are you a bot?</label>
             <input type="text" name="bot" />
         </p>
-        <p class="mb-2">
+        <p>
             <label for="name">Name:</label><br/>
-            <input type="text" name="name" placeholder="Cortana" class="border-0 rounded focus:ring-2 focus:ring-green-200" />
+            <input type="text" name="name" placeholder="Cortana" class="border-0 rounded focus:ring-2 focus:ring-green-200 h-10" />
         </p>
-        <p class="my-2">
+        <p>
             <label for="email">Email:</label><br/>
-            <input type="email" name="email" placeholder="rogue@ai.com" class="border-0 rounded focus:ring-2 focus:ring-green-200" />
+            <input type="email" name="email" placeholder="rogue@ai.com" class="border-0 rounded focus:ring-2 focus:ring-green-200 h-10" />
         </p>
-        <p class="my-2">
+        <p>
             <label for="message">Message:</label><br/>
-            <textarea name="message" placeholder="Have you tried turning it off and on again?" class="border-0 border-none rounded focus:ring-2 focus:ring-green-200" required></textarea>
+            <textarea name="message" placeholder="Turn it off and on again" class="border-0 border-none rounded focus:ring-2 focus:ring-green-200 h-10" required></textarea>
         </p>
         <p class="mt-4 text-center">
             <button type="submit" class="shadow-md text-white font-semibold border-0 bg-green-500 hover:bg-green-600 p-2 rounded">Submit</button> 
