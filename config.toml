@@ -9,3 +9,6 @@ layoutDir = "layouts"
 staticDir = "static"
 
 enableEmoji = true
+
+[build]
+    writeStats = true

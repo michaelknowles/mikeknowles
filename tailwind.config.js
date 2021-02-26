@@ -3,7 +3,11 @@
 module.exports = {
   purge: {
     enabled: process.env.HUGO_ENVIRONMENT === "production",
-    content: ["**/*.html"],
+    content: ["./hugo_stats.json"],
+    defaultExtractor: (content) => {
+      const els = JSON.parse(content).htmlElements;
+      return els.tags.concat(els.classes, els.ids);
+    },
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
