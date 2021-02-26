@@ -2,7 +2,7 @@
 
 module.exports = {
   purge: {
-    enabled: process.env.HUGO_ENVIRONMENT === "production",
+    enabled: true,
     content: ["./hugo_stats.json"],
     defaultExtractor: (content) => {
       const els = JSON.parse(content).htmlElements;
