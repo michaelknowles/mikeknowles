@@ -9,5 +9,6 @@ My personal website.
 - Hugo
 - Tailwindcss
 - Tailwindcss-forms
+- Tailwindcss-typography
 - PostCSS
 - Autoprefixer

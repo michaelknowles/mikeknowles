@@ -2,7 +2,7 @@
 
 module.exports = {
   purge: {
-    enabled: true,
+    enabled: process.env.HUGO_ENVIRONMENT === "production",
     content: ["**/*.html"],
   },
   darkMode: false, // or 'media' or 'class'
@@ -12,6 +12,17 @@ module.exports = {
       body: ["Lato", "Helvetica", "Arial", "sans-serif"],
     },
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              "&:hover": {
+                color: theme("colors.green.500"),
+              },
+            },
+          },
+        },
+      }),
       // animation: {
       //   fadeIn: "fadeIn 0.5s ease-in forwards",
       // },
@@ -27,5 +38,5 @@ module.exports = {
     // animation: ["motion-safe"],
     extend: {},
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };
